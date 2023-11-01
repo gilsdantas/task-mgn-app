@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+    <!-- Style from PDF
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+    -->
+    <!-- Change Style: Superhero -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/superhero/bootstrap.min.css" integrity="sha384-HnTY+mLT0stQlOwD3wcAzSVAZbrBp141qwfR4WfTqVQKSgmcgzk+oP0ieIyrxiFO" crossorigin="anonymous">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker">
@@ -25,13 +29,28 @@
                 <div class="card"> <!--Creacion del objeto card-->
                     <div class="card-header">
                         <form action="/crear-tarea" method="post">
-                            <!-- Separamos el input del boton metiendo el input en este form-group para que los elementos no esten pegados y haya separacion entre ellos -->
+                            <!-- Separamos el input del boton metiendo el input en este form-group para que los
+                                elementos no esten pegados y haya separacion entre ellos -->
                             <div class="form-group">
                                 <input type="text" name="contenido_tarea" placeholder="Tarea" class="form-control" autofocus>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">
-                                <!-- btn-block hace que el boton ocupe todo el ancho --> Guardar
-                            </button>
+
+                             <!-- Selecionar la categoria -->
+                            <div>
+                                <select class="form-select" aria-label="Categorias">
+                                    <option selected>Escolha la categoria para la tarea</option>
+                                    <option value="1">Education</option>
+                                    <option value="2">Salud</option>
+                                    <option value="3">Compras</option>
+                                </select>
+                            </div>
+
+                            <!-- Definir una data limite -->
+                            <div>
+
+                            </div>
+                            <!-- btn-block hace que el boton ocupe todo el ancho -->
+                            <button type="submit" class="btn btn-primary btn-block">Guardar</button>
                         </form>
                     </div>
 
