@@ -6,3 +6,8 @@ body {
 .titulo {
  font-family: 'Permanent Marker', cursive;
 }
+
+.tarea_hecha {
+     text-decoration: line-through;
+     color: #cfcfcf;
+}
